@@ -46,16 +46,39 @@ export default function Slide2() {
         </div>
 
         {/* Stat columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+        <div
+          className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8"
+          style={{ alignItems: "stretch" }}
+        >
           {stats.map((s, i) => (
-            <div key={i}>
-              <div className="slide-stat">{s.number}</div>
+            <div
+              key={i}
+              style={{
+                border: "1.5px solid #14b8a6",
+                borderRadius: "12px",
+                padding: "28px",
+                background: "rgba(20, 184, 166, 0.04)",
+                boxShadow: "0 2px 12px rgba(20, 184, 166, 0.1)",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <div
+                className="slide-stat"
+                style={
+                  i === 1
+                    ? { whiteSpace: "nowrap", fontSize: "clamp(3rem, 6.5vw, 5rem)" }
+                    : { whiteSpace: "nowrap" }
+                }
+              >
+                {s.number}
+              </div>
               <div className="divider" />
               <p style={{ color: "#0d0d0d", fontSize: "0.9rem", lineHeight: 1.6 }}>
                 <strong>{s.bold}</strong>{" "}
                 <span style={{ color: "rgba(13,13,13,0.6)" }}>{s.detail}</span>
               </p>
-              <p className="mt-3" style={{ fontSize: "0.78rem", color: "rgba(13,13,13,0.4)" }}>
+              <p style={{ fontSize: "0.78rem", color: "rgba(13,13,13,0.4)", marginTop: "auto", paddingTop: "0.75rem" }}>
                 {s.footnote}
               </p>
             </div>
