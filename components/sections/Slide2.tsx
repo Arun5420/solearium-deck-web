@@ -48,7 +48,7 @@ export default function Slide2() {
         {/* Stat columns */}
         <div
           className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8"
-          style={{ alignItems: "stretch" }}
+          style={{ alignItems: "stretch", marginLeft: "-5rem", marginRight: "-5rem" }}
         >
           {stats.map((s, i) => (
             <div
@@ -56,7 +56,7 @@ export default function Slide2() {
               style={{
                 border: "1.5px solid #14b8a6",
                 borderRadius: "12px",
-                padding: "28px",
+                padding: "28px 16px",
                 background: "rgba(20, 184, 166, 0.04)",
                 boxShadow: "0 2px 12px rgba(20, 184, 166, 0.1)",
                 display: "flex",
@@ -65,11 +65,7 @@ export default function Slide2() {
             >
               <div
                 className="slide-stat"
-                style={
-                  i === 1
-                    ? { whiteSpace: "nowrap", fontSize: "clamp(3rem, 6.5vw, 5rem)" }
-                    : { whiteSpace: "nowrap" }
-                }
+                style={{ whiteSpace: "nowrap" }}
               >
                 {s.number}
               </div>
