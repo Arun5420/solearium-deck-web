@@ -23,26 +23,30 @@ const advantages = [
   },
 ];
 
-// Nodes at -90° (top), 0° (right), 90° (bottom), 180° (left) on r=72 circle at (110,110)
+// Nodes at -90° (top), 0° (right), 90° (bottom), 180° (left) on r=105 circle at (160,160)
 const nodeData = [
-  { x: 110, y: 38,  label: "More\nPatients" },
-  { x: 182, y: 110, label: "More\nData" },
-  { x: 110, y: 182, label: "Smarter\nPrescriptions" },
-  { x: 38,  y: 110, label: "Better\nOutcomes" },
+  { x: 160, y: 55,  label: "More\nPatients" },
+  { x: 265, y: 160, label: "More\nData" },
+  { x: 160, y: 265, label: "Smarter\nPrescriptions" },
+  { x: 55,  y: 160, label: "Better\nOutcomes" },
 ];
 
 // Each arc is 50° clockwise: departure = node_angle+20°, arrival = next_node_angle-20°
-// Using SVG arc command: A rx ry x-rot large-arc-flag sweep-flag x y  (sweep=1 = clockwise)
+// A rx ry x-rot large-arc-flag sweep-flag x y  (sweep=1 = clockwise)
 const arcPaths = [
-  { from: [134.6, 42.3],  to: [177.7, 85.4],  id: "fa0" }, // top  → right
-  { from: [177.7, 134.6], to: [134.6, 177.7],  id: "fa1" }, // right → bottom
-  { from: [85.4,  177.7], to: [42.3,  134.6],  id: "fa2" }, // bottom → left
-  { from: [42.3,  85.4],  to: [85.4,  42.3],   id: "fa3" }, // left  → top  (completes loop)
+  { from: [196, 61],  to: [259, 124],  id: "fa0" }, // top  → right
+  { from: [259, 196], to: [196, 259],  id: "fa1" }, // right → bottom
+  { from: [124, 259], to: [61, 196],   id: "fa2" }, // bottom → left
+  { from: [61, 124],  to: [124, 61],   id: "fa3" }, // left  → top  (completes loop)
 ];
 
 function FlywheelSVG() {
   return (
-    <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="320" height="320" viewBox="0 0 320 320"
+      fill="none" xmlns="http://www.w3.org/2000/svg"
+      style={{ width: "100%", height: "auto" }}
+    >
       <defs>
         {arcPaths.map(a => (
           <marker key={a.id} id={a.id} markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto">
@@ -53,22 +57,22 @@ function FlywheelSVG() {
 
       <style>{`
         @keyframes flywheel-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-        .flywheel-ring { transform-origin: 110px 110px; animation: flywheel-spin 12s linear infinite; }
+        .flywheel-ring { transform-origin: 160px 160px; animation: flywheel-spin 12s linear infinite; }
       `}</style>
 
       {/* Rotating dashed ring */}
       <circle
         className="flywheel-ring"
-        cx="110" cy="110" r="72"
+        cx="160" cy="160" r="105"
         stroke="#d97706" strokeWidth="2" strokeDasharray="8 6"
         fill="none" opacity="0.35"
       />
 
-      {/* 4 arc arrows — each a 50° clockwise arc, completing a full closed loop */}
+      {/* 4 arc arrows — each a 50° clockwise arc */}
       {arcPaths.map(a => (
         <path
           key={a.id}
-          d={`M ${a.from[0]} ${a.from[1]} A 72 72 0 0 1 ${a.to[0]} ${a.to[1]}`}
+          d={`M ${a.from[0]} ${a.from[1]} A 105 105 0 0 1 ${a.to[0]} ${a.to[1]}`}
           stroke="#d97706" strokeWidth="2" strokeLinecap="round"
           fill="none" markerEnd={`url(#${a.id})`}
         />
@@ -77,24 +81,24 @@ function FlywheelSVG() {
       {/* Node circles */}
       {nodeData.map((n, i) => (
         <g key={i}>
-          <circle cx={n.x} cy={n.y} r="20" fill="#14b8a6" opacity="0.12"/>
-          <circle cx={n.x} cy={n.y} r="20" stroke="#14b8a6" strokeWidth="1.5" fill="none"/>
+          <circle cx={n.x} cy={n.y} r="29" fill="#14b8a6" opacity="0.12"/>
+          <circle cx={n.x} cy={n.y} r="29" stroke="#14b8a6" strokeWidth="1.5" fill="none"/>
           <text
-            x={n.x} y={n.y - 4}
+            x={n.x} y={n.y - 6}
             textAnchor="middle"
-            fontSize="6.5" fontWeight="700" fill="#0d0d0d"
+            fontSize="10" fontWeight="700" fill="#0d0d0d"
           >
             {n.label.split("\n").map((line, li) => (
-              <tspan key={li} x={n.x} dy={li === 0 ? "0" : "9"}>{line}</tspan>
+              <tspan key={li} x={n.x} dy={li === 0 ? "0" : "13"}>{line}</tspan>
             ))}
           </text>
         </g>
       ))}
 
       {/* Center circle + label */}
-      <circle cx="110" cy="110" r="32" fill="rgba(20,184,166,0.07)" stroke="#14b8a6" strokeWidth="1" strokeDasharray="3 3"/>
-      <text x="110" y="106" textAnchor="middle" fontSize="8" fontWeight="700" fill="#0d0d0d">The Flywheel</text>
-      <text x="110" y="118" textAnchor="middle" fontSize="8" fontWeight="700" fill="#d97706">Effect</text>
+      <circle cx="160" cy="160" r="46" fill="rgba(20,184,166,0.07)" stroke="#14b8a6" strokeWidth="1" strokeDasharray="3 3"/>
+      <text x="160" y="155" textAnchor="middle" fontSize="12" fontWeight="700" fill="#0d0d0d">The Flywheel</text>
+      <text x="160" y="171" textAnchor="middle" fontSize="12" fontWeight="700" fill="#d97706">Effect</text>
     </svg>
   );
 }

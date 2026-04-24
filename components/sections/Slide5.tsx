@@ -5,14 +5,31 @@ const steps = [
     title: "Measure",
     desc: "Gait analysis + pressure sensing + 3D scan",
     icon: (
-      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="18" cy="26" rx="13" ry="5" stroke="#14b8a6" strokeWidth="1.5" fill="none"/>
-        <path d="M8 26 C8 18 10 12 18 10 C26 12 28 18 28 26" stroke="#14b8a6" strokeWidth="1.5" fill="none"/>
-        <path d="M12 26 C12 20 14 15 18 14 C22 15 24 20 24 26" stroke="#14b8a6" strokeWidth="1.2" strokeDasharray="2 2" fill="none"/>
-        <circle cx="18" cy="10" r="2" fill="#14b8a6"/>
-        <line x1="18" y1="4" x2="18" y2="8" stroke="#14b8a6" strokeWidth="1.5" strokeLinecap="round"/>
-        <line x1="6" y1="16" x2="10" y2="18" stroke="#14b8a6" strokeWidth="1.5" strokeLinecap="round"/>
-        <line x1="30" y1="16" x2="26" y2="18" stroke="#14b8a6" strokeWidth="1.5" strokeLinecap="round"/>
+      /* Foot standing on a platform with a 3D scanner scanning it from the side */
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {/* Platform base */}
+        <rect x="8" y="66" width="50" height="7" rx="2" stroke="#d97706" strokeWidth="1.5" fill="rgba(217,119,6,0.07)"/>
+        {/* Foot silhouette (side view) */}
+        <path d="M16 66 L16 50 Q16 40 22 36 Q30 32 38 36 Q44 40 42 50 L42 58 Q46 56 50 58 Q54 62 50 65 Q44 66 30 66 Z"
+          stroke="#d97706" strokeWidth="1.5" fill="rgba(217,119,6,0.06)" strokeLinejoin="round"/>
+        {/* 3 horizontal scan lines */}
+        <line x1="8" y1="44" x2="60" y2="44" stroke="#d97706" strokeWidth="1" strokeDasharray="3 2" opacity="0.5"/>
+        <line x1="8" y1="52" x2="60" y2="52" stroke="#d97706" strokeWidth="1" strokeDasharray="3 2" opacity="0.5"/>
+        <line x1="8" y1="60" x2="60" y2="60" stroke="#d97706" strokeWidth="1" strokeDasharray="3 2" opacity="0.5"/>
+        {/* Scanner device body */}
+        <rect x="60" y="36" width="14" height="26" rx="2" stroke="#d97706" strokeWidth="1.5" fill="rgba(217,119,6,0.05)"/>
+        {/* Scanner lens */}
+        <circle cx="67" cy="49" r="4" stroke="#d97706" strokeWidth="1.2" fill="none"/>
+        <circle cx="67" cy="49" r="1.5" fill="#d97706" opacity="0.5"/>
+        {/* Scan beam (triangle pointing left from scanner) */}
+        <path d="M60 44 L52 49 L60 54 Z" stroke="#d97706" strokeWidth="1" fill="rgba(217,119,6,0.12)" strokeLinejoin="round"/>
+        {/* Point-cloud dots under foot */}
+        <circle cx="21" cy="63" r="1" fill="#d97706" opacity="0.45"/>
+        <circle cx="27" cy="63" r="1" fill="#d97706" opacity="0.45"/>
+        <circle cx="33" cy="63" r="1" fill="#d97706" opacity="0.45"/>
+        <circle cx="39" cy="63" r="1" fill="#d97706" opacity="0.45"/>
+        {/* "3D" label on scanner top */}
+        <text x="67" y="34" textAnchor="middle" fontSize="7" fontWeight="700" fill="#d97706">3D</text>
       </svg>
     ),
   },
@@ -22,12 +39,32 @@ const steps = [
     title: "Analyze & Prescribe",
     desc: "Personal Biomechanical analysis & prescription",
     icon: (
-      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="4" y="4" width="28" height="22" rx="2" stroke="#14b8a6" strokeWidth="1.5" fill="none"/>
-        <polyline points="8,20 12,14 16,17 20,10 24,13 28,7" stroke="#14b8a6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-        <circle cx="20" cy="10" r="2" fill="#14b8a6"/>
-        <line x1="12" y1="30" x2="24" y2="30" stroke="#14b8a6" strokeWidth="1.5" strokeLinecap="round"/>
-        <line x1="18" y1="26" x2="18" y2="30" stroke="#14b8a6" strokeWidth="1.5" strokeLinecap="round"/>
+      /* X-ray side view of foot/ankle skeleton with data chart suggesting analysis */
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {/* Heel bone (calcaneus) */}
+        <rect x="8" y="44" width="20" height="24" rx="7" stroke="#d97706" strokeWidth="1.5" fill="rgba(217,119,6,0.05)"/>
+        {/* Ankle bone */}
+        <circle cx="30" cy="44" r="8" stroke="#d97706" strokeWidth="1.5" fill="rgba(217,119,6,0.04)"/>
+        {/* Metatarsal bones (3 curved lines going toward toes) */}
+        <path d="M30 38 Q48 30 66 26" stroke="#d97706" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
+        <path d="M30 42 Q48 36 64 34" stroke="#d97706" strokeWidth="1.2" strokeLinecap="round" fill="none" opacity="0.65"/>
+        <path d="M30 48 Q46 46 62 44" stroke="#d97706" strokeWidth="1.2" strokeLinecap="round" fill="none" opacity="0.45"/>
+        {/* Toe bones (small circles) */}
+        <circle cx="68" cy="24" r="4" stroke="#d97706" strokeWidth="1.2" fill="rgba(217,119,6,0.04)"/>
+        <circle cx="66" cy="32" r="3.5" stroke="#d97706" strokeWidth="1.2" fill="rgba(217,119,6,0.04)"/>
+        <circle cx="64" cy="40" r="3" stroke="#d97706" strokeWidth="1.2" fill="rgba(217,119,6,0.04)"/>
+        {/* Data chart (upper-left area) */}
+        <rect x="8" y="8" width="24" height="18" rx="2" stroke="#d97706" strokeWidth="1.2" fill="rgba(217,119,6,0.04)"/>
+        <rect x="11" y="16" width="3.5" height="8" fill="#d97706" opacity="0.55"/>
+        <rect x="16" y="12" width="3.5" height="12" fill="#d97706" opacity="0.75"/>
+        <rect x="21" y="14" width="3.5" height="10" fill="#d97706" opacity="0.65"/>
+        <rect x="26" y="11" width="3.5" height="13" fill="#d97706" opacity="0.85"/>
+        {/* Dashed line connecting chart to ankle */}
+        <line x1="32" y1="18" x2="28" y2="38" stroke="#d97706" strokeWidth="0.8" strokeDasharray="2 2" opacity="0.5"/>
+        {/* Vertical measurement arrow on left */}
+        <line x1="4" y1="44" x2="4" y2="68" stroke="#d97706" strokeWidth="1" strokeLinecap="round" opacity="0.6"/>
+        <path d="M2 46 L4 43 L6 46" stroke="#d97706" strokeWidth="1" fill="none" strokeLinecap="round" opacity="0.6"/>
+        <path d="M2 66 L4 69 L6 66" stroke="#d97706" strokeWidth="1" fill="none" strokeLinecap="round" opacity="0.6"/>
       </svg>
     ),
   },
@@ -37,21 +74,23 @@ const steps = [
     title: "Design & Manufacture",
     desc: "Personalised orthotic via CAD/CAM engineering",
     icon: (
-      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="18" cy="18" r="5" stroke="#14b8a6" strokeWidth="1.5" fill="none"/>
-        <circle cx="18" cy="18" r="2" fill="#14b8a6"/>
-        <path d="M18 6 L20 10 L18 9 L16 10 Z" fill="#14b8a6"/>
-        <path d="M18 30 L20 26 L18 27 L16 26 Z" fill="#14b8a6"/>
-        <path d="M6 18 L10 20 L9 18 L10 16 Z" fill="#14b8a6"/>
-        <path d="M30 18 L26 20 L27 18 L26 16 Z" fill="#14b8a6"/>
-        <path d="M9.5 9.5 L12.5 13 L11 12.5 L10.5 14 Z" fill="#14b8a6"/>
-        <path d="M26.5 26.5 L23.5 23 L25 23.5 L25.5 22 Z" fill="#14b8a6"/>
-        <path d="M26.5 9.5 L23 12.5 L23.5 11 L22 10.5 Z" fill="#14b8a6"/>
-        <path d="M9.5 26.5 L13 23.5 L12.5 25 L14 25.5 Z" fill="#14b8a6"/>
-        <circle cx="18" cy="6" r="1.5" stroke="#14b8a6" strokeWidth="1" fill="none"/>
-        <circle cx="18" cy="30" r="1.5" stroke="#14b8a6" strokeWidth="1" fill="none"/>
-        <circle cx="6" cy="18" r="1.5" stroke="#14b8a6" strokeWidth="1" fill="none"/>
-        <circle cx="30" cy="18" r="1.5" stroke="#14b8a6" strokeWidth="1" fill="none"/>
+      /* 3D insole/orthotic top-view with CAD contour lines and a mouse cursor */
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {/* Insole outline (elongated oval, slightly heel-wider) */}
+        <path d="M22 70 Q12 64 12 52 Q12 36 18 26 Q24 16 34 14 Q44 12 52 18 Q62 24 64 36 Q66 48 62 58 Q56 68 44 72 Q34 74 22 70 Z"
+          stroke="#d97706" strokeWidth="1.5" fill="rgba(217,119,6,0.05)"/>
+        {/* CAD contour lines across insole surface */}
+        <path d="M24 28 Q36 20 48 26 Q58 30 62 38" stroke="#d97706" strokeWidth="1" fill="none" opacity="0.5"/>
+        <path d="M18 40 Q28 30 42 32 Q56 34 64 46" stroke="#d97706" strokeWidth="1" fill="none" opacity="0.5"/>
+        <path d="M14 52 Q24 42 40 44 Q56 46 64 58" stroke="#d97706" strokeWidth="1" fill="none" opacity="0.5"/>
+        <path d="M16 62 Q26 54 40 56 Q52 58 60 68" stroke="#d97706" strokeWidth="0.8" fill="none" opacity="0.4"/>
+        {/* Control points on contour lines */}
+        <circle cx="36" cy="21" r="2" fill="#d97706" opacity="0.6"/>
+        <circle cx="52" cy="34" r="2" fill="#d97706" opacity="0.6"/>
+        <circle cx="38" cy="43" r="2" fill="#d97706" opacity="0.6"/>
+        {/* Mouse/cursor icon (top-right) */}
+        <path d="M60 8 L60 22 L63 18.5 L65.5 24 L67.5 23 L65 17.5 L69 17.5 Z"
+          stroke="#d97706" strokeWidth="1.2" fill="rgba(217,119,6,0.12)" strokeLinejoin="round"/>
       </svg>
     ),
   },
@@ -61,14 +100,28 @@ const steps = [
     title: "Deliver & Scale",
     desc: "Custom footwear shipped direct-to-customer",
     icon: (
-      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="4" y="12" width="20" height="14" rx="2" stroke="#14b8a6" strokeWidth="1.5" fill="none"/>
-        <path d="M24 16 L30 16 L32 22 L32 26 L24 26 Z" stroke="#14b8a6" strokeWidth="1.5" fill="none" strokeLinejoin="round"/>
-        <circle cx="10" cy="28" r="2.5" stroke="#14b8a6" strokeWidth="1.5" fill="none"/>
-        <circle cx="27" cy="28" r="2.5" stroke="#14b8a6" strokeWidth="1.5" fill="none"/>
-        <line x1="8" y1="12" x2="8" y2="8" stroke="#14b8a6" strokeWidth="1.5" strokeLinecap="round"/>
-        <line x1="5" y1="8" x2="11" y2="8" stroke="#14b8a6" strokeWidth="1.5" strokeLinecap="round"/>
-        <line x1="14" y1="8" x2="20" y2="8" stroke="#14b8a6" strokeWidth="1.2" strokeDasharray="1.5 1.5" strokeLinecap="round"/>
+      /* Isometric delivery box labeled "SA" with arrows pointing to a shoe below */
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {/* Box top face */}
+        <path d="M40 8 L60 17 L40 26 L20 17 Z"
+          stroke="#d97706" strokeWidth="1.5" fill="rgba(217,119,6,0.08)" strokeLinejoin="round"/>
+        {/* Box left face */}
+        <path d="M20 17 L20 38 L40 47 L40 26 Z"
+          stroke="#d97706" strokeWidth="1.5" fill="rgba(217,119,6,0.05)" strokeLinejoin="round"/>
+        {/* Box right face */}
+        <path d="M40 26 L40 47 L60 38 L60 17 Z"
+          stroke="#d97706" strokeWidth="1.5" fill="rgba(217,119,6,0.03)" strokeLinejoin="round"/>
+        {/* Center seam on top */}
+        <line x1="40" y1="8" x2="40" y2="26" stroke="#d97706" strokeWidth="1" opacity="0.4"/>
+        {/* "SA" brand text on right face */}
+        <text x="50" y="35" textAnchor="middle" fontSize="8" fontWeight="700" fill="#d97706" opacity="0.85">SA</text>
+        {/* Down arrow */}
+        <line x1="40" y1="49" x2="40" y2="58" stroke="#d97706" strokeWidth="1.5" strokeLinecap="round"/>
+        <path d="M36 55 L40 60 L44 55" stroke="#d97706" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+        {/* Shoe silhouette below */}
+        <path d="M16 76 Q20 67 28 66 Q38 64 46 67 L52 69 Q48 72 40 73 Q30 75 22 77 Z"
+          stroke="#d97706" strokeWidth="1.5" fill="rgba(217,119,6,0.05)" strokeLinejoin="round"/>
+        <path d="M16 76 Q18 78 22 78 L40 73" stroke="#d97706" strokeWidth="1" fill="none" strokeLinecap="round" opacity="0.55"/>
       </svg>
     ),
   },
@@ -123,14 +176,15 @@ export default function Slide5() {
                   }}
                 />
               )}
-              {/* Teal icon box */}
+              {/* Teal icon box — sized to the 80×80 icon */}
               <div
-                className="relative z-10 mb-4 inline-flex items-center justify-center"
+                className="relative z-10 mb-4 flex items-center justify-center"
                 style={{
                   border: "1.5px solid #14b8a6",
                   borderRadius: "12px",
-                  padding: "16px",
+                  padding: "14px",
                   background: "rgba(20,184,166,0.04)",
+                  width: "fit-content",
                 }}
               >
                 {s.icon}
