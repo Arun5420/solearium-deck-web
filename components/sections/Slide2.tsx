@@ -48,7 +48,7 @@ export default function Slide2() {
         {/* Stat columns */}
         <div
           className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8"
-          style={{ alignItems: "stretch", marginLeft: "-5rem", marginRight: "-5rem" }}
+          style={{ alignItems: "stretch", marginLeft: "-5rem", marginRight: "-5rem", gridTemplateColumns: "1fr 1.4fr 1fr" }}
         >
           {stats.map((s, i) => (
             <div
