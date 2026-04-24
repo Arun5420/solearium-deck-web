@@ -47,7 +47,17 @@ export default function Slide11() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {tiers.map((t, ti) => (
-            <div key={ti}>
+            <div
+              key={ti}
+              style={{
+                border: "1.5px solid #14b8a6",
+                borderRadius: "12px",
+                padding: "24px",
+                background: "rgba(20,184,166,0.04)",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
               <p
                 style={{
                   fontSize: "0.72rem",
@@ -93,9 +103,7 @@ export default function Slide11() {
                 </tbody>
               </table>
 
-              <div
-                className="flex items-center gap-2 mt-3"
-              >
+              <div className="flex items-center gap-2 mt-auto pt-3">
                 <span
                   style={{
                     fontSize: "1.5rem",
