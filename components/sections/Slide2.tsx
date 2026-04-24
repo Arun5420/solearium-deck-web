@@ -34,8 +34,8 @@ export default function Slide2() {
       />
 
       <div className="slide-container z-10">
-        {/* Heading block */}
-        <div className="mb-14">
+        {/* Heading block — shifted left to align with first box edge */}
+        <div className="mb-14" style={{ marginLeft: "-5rem" }}>
           <p className="slide-label mb-3">The Problem</p>
           <h2 className="slide-heading">
             The Numbers Behind the Pain
@@ -61,11 +61,12 @@ export default function Slide2() {
                 boxShadow: "0 2px 12px rgba(20, 184, 166, 0.1)",
                 display: "flex",
                 flexDirection: "column",
+                minWidth: 0,
               }}
             >
               <div
                 className="slide-stat"
-                style={{ whiteSpace: "nowrap" }}
+                style={i === 1 ? { whiteSpace: "nowrap" } : undefined}
               >
                 {s.number}
               </div>
@@ -81,10 +82,14 @@ export default function Slide2() {
           ))}
         </div>
 
-        {/* Footer rule */}
+        {/* Footer rule — spans from first box left edge to last box right edge */}
         <div
           className="mt-14 pt-6"
-          style={{ borderTop: "1px solid rgba(13,13,13,0.08)" }}
+          style={{
+            borderTop: "1px solid rgba(13,13,13,0.08)",
+            marginLeft: "-5rem",
+            marginRight: "-5rem",
+          }}
         >
           <p style={{ fontSize: "0.875rem", color: "rgba(13,13,13,0.5)" }}>
             Clinical-grade biomechanics based orthopaedic correction{" "}

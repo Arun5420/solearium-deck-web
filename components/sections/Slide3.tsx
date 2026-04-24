@@ -53,14 +53,16 @@ export default function Slide3() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {solutions.map((s, i) => (
             <div
               key={i}
-              className="flex flex-col py-5 lg:pr-6"
+              className="flex flex-col"
               style={{
-                borderRight: i < solutions.length - 1 ? "1px solid rgba(13,13,13,0.07)" : "none",
-                paddingLeft: i > 0 ? "1.5rem" : "0",
+                border: "1.5px solid #14b8a6",
+                borderRadius: "12px",
+                padding: "24px",
+                background: "rgba(20, 184, 166, 0.04)",
               }}
             >
               <p

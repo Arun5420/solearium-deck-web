@@ -3,9 +3,9 @@ const markets = [
     label: "Entry Market",
     sub: "Custom Orthopaedics Market",
     items: [
-      { val: "$9.76 B", key: "TAM (Global)" },
-      { val: "$440 M", key: "SAM (Indian)" },
-      { val: "$25 M", key: "SOM*" },
+      { val: "$9.76 B", key: "TAM (Global)", size: 120, bg: "#0d9488", text: "#fff" },
+      { val: "$440 M", key: "SAM (Indian)", size: 86, bg: "#5eead4", text: "#0d0d0d" },
+      { val: "$25 M", key: "SOM*", size: 60, bg: "#ccfbf1", text: "#0d0d0d" },
     ],
     cagr: "8–8.5%",
     source: "Grand View Research",
@@ -14,9 +14,9 @@ const markets = [
     label: "Platform Vision",
     sub: "Total Footwear Market",
     items: [
-      { val: "$550 B", key: "TAM (Global)" },
-      { val: "$38.01 B", key: "SAM (Indian)" },
-      { val: "$10 M", key: "SOM*" },
+      { val: "$550 B", key: "TAM (Global)", size: 120, bg: "#0d9488", text: "#fff" },
+      { val: "$38.01 B", key: "SAM (Indian)", size: 86, bg: "#5eead4", text: "#0d0d0d" },
+      { val: "$10 M", key: "SOM*", size: 60, bg: "#ccfbf1", text: "#0d0d0d" },
     ],
     cagr: "7%",
     source: "Fortune Business Insights",
@@ -49,22 +49,41 @@ export default function Slide8() {
               </p>
               <p className="slide-body mb-8">{m.sub}</p>
 
-              <div className="flex flex-col gap-4">
+              {/* Bubble stack */}
+              <div className="flex flex-col gap-3 items-start">
                 {m.items.map((item, ii) => (
-                  <div key={ii} className="flex items-baseline gap-4">
-                    <span
+                  <div
+                    key={ii}
+                    className="flex items-center gap-4"
+                  >
+                    <div
+                      className="flex-shrink-0 flex flex-col items-center justify-center rounded-full"
                       style={{
-                        fontSize: ii === 0 ? "clamp(2.2rem, 5vw, 3.5rem)" : ii === 1 ? "clamp(1.6rem, 3.5vw, 2.4rem)" : "clamp(1.2rem, 2.5vw, 1.8rem)",
-                        fontWeight: 900,
-                        color: ii === 0 ? "#d97706" : ii === 1 ? "rgba(217,119,6,0.7)" : "rgba(217,119,6,0.45)",
-                        lineHeight: 1,
-                        letterSpacing: "-0.02em",
-                        minWidth: ii === 0 ? "160px" : ii === 1 ? "130px" : "100px",
+                        width: item.size,
+                        height: item.size,
+                        background: item.bg,
+                        boxShadow: `0 4px 16px ${item.bg}55`,
                       }}
                     >
-                      {item.val}
+                      <span
+                        style={{
+                          fontSize: ii === 0 ? "1rem" : ii === 1 ? "0.82rem" : "0.7rem",
+                          fontWeight: 900,
+                          color: item.text,
+                          lineHeight: 1.1,
+                          textAlign: "center",
+                          padding: "0 6px",
+                        }}
+                      >
+                        {item.val}
+                      </span>
+                    </div>
+                    <span
+                      className="slide-label"
+                      style={{ color: "rgba(13,13,13,0.55)" }}
+                    >
+                      {item.key}
                     </span>
-                    <span className="slide-label">{item.key}</span>
                   </div>
                 ))}
               </div>

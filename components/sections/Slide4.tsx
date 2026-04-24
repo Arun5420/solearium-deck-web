@@ -1,30 +1,36 @@
 const segments = [
   {
+    icon: "🏥",
     title: "Medical Condition",
     desc: "Diabetic Foot, Leprosy, Polio, Charcot Arthropathy, Arthritis, Varicos Veins",
     tag: "High urgency, Doctors driven",
   },
   {
+    icon: "🏃",
     title: "Performance",
     desc: "Athletes, other sports persons",
     tag: "High willingness to pay",
   },
   {
+    icon: "🦶",
     title: "Structural Issues",
     desc: "Flat feet, High Arches, Bunions, Hammer toes etc",
     tag: "Large, silent population",
   },
   {
+    icon: "💼",
     title: "Occupational",
     desc: "Long standing jobs (teachers, nurses etc)",
     tag: "Daily pain, Repeated usage",
   },
   {
+    icon: "🩹",
     title: "Injury & Recovery",
     desc: "Plantar Fascitis, Post-Surgical, ACL tear, fracture etc",
     tag: "Active seekers, high conversion",
   },
   {
+    icon: "😌",
     title: "General Comfort",
     desc: "Overpronation, Supination, fatigue, back/knee/ankle pain",
     tag: "Mass entry point",
@@ -65,6 +71,9 @@ export default function Slide4() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-8">
           {segments.map((s, i) => (
             <div key={i} className="flex flex-col gap-1">
+              <span style={{ fontSize: "1.6rem", lineHeight: 1, marginBottom: "0.5rem" }}>
+                {s.icon}
+              </span>
               <div
                 className="w-6 h-0.5 mb-3"
                 style={{ background: "#d97706" }}
