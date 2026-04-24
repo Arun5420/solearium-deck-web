@@ -3,25 +3,60 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #0D0D0D;
+  --accent: #E8A020;
+  --bone: #F5F2EE;
+  --bone-70: rgba(245, 242, 238, 0.7);
+  --bone-40: rgba(245, 242, 238, 0.4);
+  --bone-15: rgba(245, 242, 238, 0.15);
+  --bone-08: rgba(245, 242, 238, 0.08);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0D0D0D;
+  color: #F5F2EE;
+  font-family: var(--font-inter), sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.accent { color: #E8A020; }
+.accent-bg { background-color: #E8A020; }
+.bone { color: #F5F2EE; }
+.bone-70 { color: rgba(245, 242, 238, 0.7); }
+.border-subtle { border-color: rgba(245, 242, 238, 0.15); }
+
+.table-cell-style {
+  border: 1px solid rgba(245, 242, 238, 0.15);
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  color: rgba(245, 242, 238, 0.85);
+}
+
+.table-header-style {
+  border: 1px solid rgba(245, 242, 238, 0.15);
+  padding: 0.6rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #E8A020;
+  background: rgba(232, 160, 32, 0.08);
 }
