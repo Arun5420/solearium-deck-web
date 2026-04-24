@@ -110,7 +110,7 @@ export default function Slide10() {
       <div className="slide-container z-10">
         <div className="mb-12">
           <p className="slide-label mb-3">Go-to-market</p>
-          <h2 className="slide-heading">GTM Strategy</h2>
+          <h2 className="slide-heading">GTM <span className="amber">Strategy</span></h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
