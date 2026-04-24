@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --bg: #0D0D0D;
-  --accent: #E8A020;
-  --bone: #F5F2EE;
-  --bone-70: rgba(245, 242, 238, 0.7);
-  --bone-40: rgba(245, 242, 238, 0.4);
-  --bone-15: rgba(245, 242, 238, 0.15);
-  --bone-08: rgba(245, 242, 238, 0.08);
+  --bg: #f9f8f3;
+  --accent: #d97706;
+  --bone: #0d0d0d;
+  --bone-70: rgba(13, 13, 13, 0.7);
+  --bone-40: rgba(13, 13, 13, 0.4);
+  --bone-15: rgba(13, 13, 13, 0.15);
+  --bone-08: rgba(13, 13, 13, 0.08);
 }
 
 * {
@@ -22,8 +22,8 @@ html {
 }
 
 body {
-  background-color: #0D0D0D;
-  color: #F5F2EE;
+  background-color: #f9f8f3;
+  color: #0d0d0d;
   margin: 0;
   padding: 0;
 }
@@ -37,7 +37,7 @@ body {
   position: relative;
   overflow: hidden;
   padding: 3rem 0;
-  border-top: 1px solid rgba(245, 242, 238, 0.05);
+  border-top: 1px solid rgba(13, 13, 13, 0.08);
 }
 
 .section:first-child {
@@ -56,7 +56,7 @@ body {
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -0.02em;
-  color: #F5F2EE;
+  color: #0d0d0d;
 }
 
 .slide-stat {
@@ -64,7 +64,7 @@ body {
   font-weight: 900;
   line-height: 1;
   letter-spacing: -0.03em;
-  color: #E8A020;
+  color: #d97706;
 }
 
 .slide-label {
@@ -72,23 +72,23 @@ body {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(245, 242, 238, 0.45);
+  color: rgba(13, 13, 13, 0.45);
 }
 
 .slide-body {
   font-size: 0.9rem;
   line-height: 1.65;
-  color: rgba(245, 242, 238, 0.65);
+  color: rgba(13, 13, 13, 0.65);
 }
 
 .slide-subtext {
   font-size: clamp(1rem, 1.8vw, 1.2rem);
   line-height: 1.6;
-  color: rgba(245, 242, 238, 0.65);
+  color: rgba(13, 13, 13, 0.65);
   max-width: 680px;
 }
 
-.amber { color: #E8A020; }
+.amber { color: #d97706; }
 
 .tag-chip {
   display: inline-block;
@@ -97,21 +97,21 @@ body {
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.04em;
-  background: rgba(232, 160, 32, 0.12);
-  color: rgba(232, 160, 32, 0.9);
-  border: 1px solid rgba(232, 160, 32, 0.2);
+  background: rgba(20, 184, 166, 0.1);
+  color: #14b8a6;
+  border: 1px solid rgba(20, 184, 166, 0.25);
 }
 
 .divider {
   width: 40px;
   height: 2px;
-  background: #E8A020;
+  background: #d97706;
   margin: 1.25rem 0;
 }
 
-.check-yes { color: #E8A020; font-weight: 700; }
-.check-no  { color: rgba(245, 242, 238, 0.25); }
-.check-partial { color: rgba(245, 242, 238, 0.5); }
+.check-yes { color: #d97706; font-weight: 700; }
+.check-no  { color: rgba(13, 13, 13, 0.25); }
+.check-partial { color: #14b8a6; }
 
 /* Clean table */
 .deck-table {
@@ -125,25 +125,25 @@ body {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(245, 242, 238, 0.4);
-  border-bottom: 1px solid rgba(245, 242, 238, 0.08);
+  color: rgba(13, 13, 13, 0.4);
+  border-bottom: 1px solid rgba(13, 13, 13, 0.1);
 }
 .deck-table td {
   padding: 0.85rem 1.25rem;
   font-size: 0.875rem;
-  color: rgba(245, 242, 238, 0.8);
-  border-bottom: 1px solid rgba(245, 242, 238, 0.06);
+  color: rgba(13, 13, 13, 0.8);
+  border-bottom: 1px solid rgba(13, 13, 13, 0.06);
 }
 .deck-table tbody tr:last-child td {
   border-bottom: none;
 }
 .deck-table tbody tr.row-highlight td {
-  background: rgba(232, 160, 32, 0.07);
-  color: #F5F2EE;
+  background: rgba(217, 119, 6, 0.07);
+  color: #0d0d0d;
   font-weight: 600;
 }
 .deck-table tbody tr.row-highlight td:first-child {
-  color: #E8A020;
+  color: #d97706;
 }
 
 /* Orb decorations */

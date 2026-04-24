@@ -41,7 +41,7 @@ export default function Slide8() {
                 style={{
                   fontSize: "1rem",
                   fontWeight: 700,
-                  color: "#F5F2EE",
+                  color: "#0d0d0d",
                   marginBottom: "0.2rem",
                 }}
               >
@@ -56,7 +56,7 @@ export default function Slide8() {
                       style={{
                         fontSize: ii === 0 ? "clamp(2.2rem, 5vw, 3.5rem)" : ii === 1 ? "clamp(1.6rem, 3.5vw, 2.4rem)" : "clamp(1.2rem, 2.5vw, 1.8rem)",
                         fontWeight: 900,
-                        color: ii === 0 ? "#E8A020" : ii === 1 ? "rgba(232,160,32,0.7)" : "rgba(232,160,32,0.45)",
+                        color: ii === 0 ? "#d97706" : ii === 1 ? "rgba(217,119,6,0.7)" : "rgba(217,119,6,0.45)",
                         lineHeight: 1,
                         letterSpacing: "-0.02em",
                         minWidth: ii === 0 ? "160px" : ii === 1 ? "130px" : "100px",
@@ -71,10 +71,10 @@ export default function Slide8() {
 
               <div
                 className="mt-6 pt-5"
-                style={{ borderTop: "1px solid rgba(245,242,238,0.07)" }}
+                style={{ borderTop: "1px solid rgba(13,13,13,0.07)" }}
               >
                 <span className="tag-chip">CAGR {m.cagr}</span>
-                <p className="mt-2" style={{ fontSize: "0.72rem", color: "rgba(245,242,238,0.3)" }}>
+                <p className="mt-2" style={{ fontSize: "0.72rem", color: "rgba(13,13,13,0.3)" }}>
                   * {m.source}
                 </p>
               </div>
@@ -82,7 +82,7 @@ export default function Slide8() {
           ))}
         </div>
 
-        <p className="mt-8" style={{ fontSize: "0.72rem", color: "rgba(245,242,238,0.3)" }}>
+        <p className="mt-8" style={{ fontSize: "0.72rem", color: "rgba(13,13,13,0.3)" }}>
           *SOM is based on year 3 revenue estimations
         </p>
       </div>

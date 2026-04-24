@@ -46,14 +46,14 @@ export default function Slide7() {
               style={{
                 width: "180px",
                 height: "180px",
-                border: "2px solid rgba(232,160,32,0.35)",
-                background: "rgba(232,160,32,0.05)",
+                border: "2px solid rgba(217,119,6,0.35)",
+                background: "rgba(217,119,6,0.05)",
               }}
             >
               <p
                 style={{
                   fontSize: "0.7rem",
-                  color: "rgba(245,242,238,0.6)",
+                  color: "rgba(13,13,13,0.6)",
                   lineHeight: 1.5,
                   textAlign: "center",
                   padding: "0 1rem",
@@ -72,7 +72,7 @@ export default function Slide7() {
                 <div key={i}>
                   <span
                     className="text-xs font-black"
-                    style={{ color: "#E8A020" }}
+                    style={{ color: "#d97706" }}
                   >
                     {p.num}.
                   </span>{" "}
@@ -80,7 +80,7 @@ export default function Slide7() {
                     style={{
                       fontSize: "0.78rem",
                       fontWeight: 600,
-                      color: "#F5F2EE",
+                      color: "#0d0d0d",
                     }}
                   >
                     {p.label}
@@ -93,9 +93,9 @@ export default function Slide7() {
               className="mt-4"
               style={{
                 fontSize: "0.72rem",
-                color: "rgba(245,242,238,0.35)",
+                color: "rgba(13,13,13,0.35)",
                 paddingTop: "0.75rem",
-                borderTop: "1px solid rgba(245,242,238,0.07)",
+                borderTop: "1px solid rgba(13,13,13,0.07)",
               }}
             >
               Bridging clinical precision & consumer accessibility
@@ -110,12 +110,12 @@ export default function Slide7() {
                 <div key={i} className="flex gap-3">
                   <span
                     className="flex-shrink-0 font-black text-sm mt-0.5"
-                    style={{ color: "#E8A020", width: "16px" }}
+                    style={{ color: "#d97706", width: "16px" }}
                   >
                     {a.num}.
                   </span>
                   <div>
-                    <p style={{ fontSize: "0.875rem", fontWeight: 700, color: "#F5F2EE" }}>
+                    <p style={{ fontSize: "0.875rem", fontWeight: 700, color: "#0d0d0d" }}>
                       {a.title}
                     </p>
                     <p className="slide-body mt-0.5">{a.desc}</p>
@@ -129,11 +129,11 @@ export default function Slide7() {
         {/* Bottom quote */}
         <div
           className="mt-10 pt-8"
-          style={{ borderTop: "1px solid rgba(245,242,238,0.07)" }}
+          style={{ borderTop: "1px solid rgba(13,13,13,0.07)" }}
         >
-          <p style={{ fontSize: "clamp(0.9rem, 1.6vw, 1.1rem)", color: "rgba(245,242,238,0.7)", lineHeight: 1.6 }}>
+          <p style={{ fontSize: "clamp(0.9rem, 1.6vw, 1.1rem)", color: "rgba(13,13,13,0.7)", lineHeight: 1.6 }}>
             We are not building a better insole. We are building India&apos;s{" "}
-            <span style={{ color: "#F5F2EE", fontWeight: 600 }}>
+            <span style={{ color: "#0d0d0d", fontWeight: 600 }}>
               biomechanical correction infrastructure
             </span>
             , starting with footwear.

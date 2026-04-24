@@ -35,7 +35,7 @@ export default function Slide12() {
                     <p
                       style={{
                         fontSize: "0.7rem",
-                        color: "rgba(245,242,238,0.65)",
+                        color: "rgba(13,13,13,0.65)",
                         lineHeight: 1.5,
                         whiteSpace: "pre-line",
                         textAlign: "center",
@@ -56,7 +56,7 @@ export default function Slide12() {
                     className="relative w-full flex items-center justify-center"
                     style={{
                       height: "38px",
-                      background: "#E8A020",
+                      background: "#d97706",
                       clipPath:
                         i < milestones.length - 1
                           ? "polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%, 12px 50%)"
@@ -68,7 +68,7 @@ export default function Slide12() {
                       style={{
                         fontSize: "0.6rem",
                         fontWeight: 800,
-                        color: "#0D0D0D",
+                        color: "#f9f8f3",
                         whiteSpace: "pre-line",
                         textAlign: "center",
                         lineHeight: 1.3,
@@ -93,7 +93,7 @@ export default function Slide12() {
                     <p
                       style={{
                         fontSize: "0.7rem",
-                        color: "rgba(245,242,238,0.65)",
+                        color: "rgba(13,13,13,0.65)",
                         lineHeight: 1.5,
                         whiteSpace: "pre-line",
                         textAlign: "center",

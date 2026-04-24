@@ -14,7 +14,7 @@ export default function Slide6() {
         style={{
           top: "-90px", left: "22%",
           width: "320px", height: "320px",
-          background: "radial-gradient(circle at 42% 42%, rgba(255,255,255,0.08) 0%, transparent 58%)",
+          background: "radial-gradient(circle at 42% 42%, rgba(13,13,13,0.04) 0%, transparent 58%)",
           filter: "blur(4px)",
         }}
       />
@@ -38,20 +38,20 @@ export default function Slide6() {
                 key={i}
                 className="relative flex flex-col items-center justify-center text-center px-6 py-8"
                 style={{
-                  border: "1.5px solid rgba(232,160,32,0.3)",
+                  border: "1.5px solid rgba(217,119,6,0.3)",
                   borderRadius: "999px",
                   minWidth: "148px",
                   minHeight: "210px",
                   flex: "1 1 140px",
                   maxWidth: "185px",
-                  background: "rgba(232,160,32,0.04)",
+                  background: "rgba(217,119,6,0.04)",
                 }}
               >
                 <p
                   style={{
                     fontSize: "0.85rem",
                     fontWeight: 600,
-                    color: "#F5F2EE",
+                    color: "#0d0d0d",
                     lineHeight: 1.45,
                     whiteSpace: "pre-line",
                   }}
@@ -65,8 +65,8 @@ export default function Slide6() {
                     width: "28px",
                     height: "28px",
                     borderRadius: "50%",
-                    background: "#E8A020",
-                    color: "#0D0D0D",
+                    background: "#d97706",
+                    color: "#f9f8f3",
                   }}
                 >
                   {p.num}

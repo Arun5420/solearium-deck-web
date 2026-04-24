@@ -53,7 +53,7 @@ export default function Slide11() {
                   fontSize: "0.72rem",
                   fontWeight: 700,
                   letterSpacing: "0.1em",
-                  color: "rgba(245,242,238,0.4)",
+                  color: "rgba(13,13,13,0.4)",
                   textTransform: "uppercase",
                   marginBottom: "0.75rem",
                 }}
@@ -73,20 +73,20 @@ export default function Slide11() {
                   {t.rows.map((r, ri) => (
                     <tr key={ri} className={r.bold ? "row-highlight" : ""}>
                       <td>{r.variant}</td>
-                      <td className="text-right" style={{ color: "rgba(245,242,238,0.55)" }}>{r.cogs}</td>
+                      <td className="text-right" style={{ color: "rgba(13,13,13,0.55)" }}>{r.cogs}</td>
                       <td className="text-right">{r.price}</td>
                     </tr>
                   ))}
                   <tr>
-                    <td colSpan={2} style={{ color: "rgba(245,242,238,0.35)", fontSize: "0.75rem" }}>
+                    <td colSpan={2} style={{ color: "rgba(13,13,13,0.35)", fontSize: "0.75rem" }}>
                       Fixed Costs
                     </td>
-                    <td className="text-right" style={{ color: "rgba(245,242,238,0.5)", fontSize: "0.75rem" }}>
+                    <td className="text-right" style={{ color: "rgba(13,13,13,0.5)", fontSize: "0.75rem" }}>
                       {t.fixed}
                     </td>
                   </tr>
                   <tr>
-                    <td colSpan={3} style={{ color: "rgba(245,242,238,0.3)", fontSize: "0.72rem" }}>
+                    <td colSpan={3} style={{ color: "rgba(13,13,13,0.3)", fontSize: "0.72rem" }}>
                       Materials: {t.materials}
                     </td>
                   </tr>
@@ -100,7 +100,7 @@ export default function Slide11() {
                   style={{
                     fontSize: "1.5rem",
                     fontWeight: 900,
-                    color: "#E8A020",
+                    color: "#d97706",
                     lineHeight: 1,
                   }}
                 >
@@ -114,7 +114,7 @@ export default function Slide11() {
 
         <div
           className="mt-10 pt-6"
-          style={{ borderTop: "1px solid rgba(245,242,238,0.07)" }}
+          style={{ borderTop: "1px solid rgba(13,13,13,0.07)" }}
         >
           <p className="slide-label" style={{ letterSpacing: "0.1em" }}>
             Keeping consistent gross margin of 55% across products

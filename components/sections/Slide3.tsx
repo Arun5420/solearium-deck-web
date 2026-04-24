@@ -40,7 +40,7 @@ export default function Slide3() {
         style={{
           top: "-60px", right: "-60px",
           width: "200px", height: "200px",
-          background: "radial-gradient(circle, rgba(232,160,32,0.6) 0%, rgba(232,160,32,0.1) 50%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(217,119,6,0.6) 0%, rgba(217,119,6,0.1) 50%, transparent 70%)",
           filter: "blur(3px)",
         }}
       />
@@ -59,7 +59,7 @@ export default function Slide3() {
               key={i}
               className="flex flex-col py-5 lg:pr-6"
               style={{
-                borderRight: i < solutions.length - 1 ? "1px solid rgba(245,242,238,0.07)" : "none",
+                borderRight: i < solutions.length - 1 ? "1px solid rgba(13,13,13,0.07)" : "none",
                 paddingLeft: i > 0 ? "1.5rem" : "0",
               }}
             >
@@ -67,7 +67,7 @@ export default function Slide3() {
                 style={{
                   fontSize: "0.8rem",
                   fontWeight: 700,
-                  color: "#F5F2EE",
+                  color: "#0d0d0d",
                   lineHeight: 1.35,
                   marginBottom: "0.75rem",
                 }}
@@ -78,7 +78,7 @@ export default function Slide3() {
               <p className="slide-body mb-4">{s.nature}</p>
               <div className="mt-auto">
                 <p className="slide-label mb-1">Gap</p>
-                <p style={{ fontSize: "0.8rem", color: "rgba(245,242,238,0.5)", lineHeight: 1.5 }}>
+                <p style={{ fontSize: "0.8rem", color: "rgba(13,13,13,0.5)", lineHeight: 1.5 }}>
                   {s.gap}
                 </p>
               </div>

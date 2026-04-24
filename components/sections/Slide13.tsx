@@ -34,11 +34,11 @@ export default function Slide13() {
         style={{
           top: "-50px", left: "-50px",
           width: "200px", height: "200px",
-          background: "radial-gradient(circle, rgba(232,160,32,0.6) 0%, rgba(232,160,32,0.08) 50%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(217,119,6,0.6) 0%, rgba(217,119,6,0.08) 50%, transparent 70%)",
           filter: "blur(2px)",
         }}
       />
-      <span className="absolute top-8 right-10 text-xl select-none" style={{ color: "rgba(245,242,238,0.15)" }}>+</span>
+      <span className="absolute top-8 right-10 text-xl select-none" style={{ color: "rgba(13,13,13,0.15)" }}>+</span>
 
       <div className="slide-container z-10">
         <div className="mb-12 text-center">
@@ -56,25 +56,25 @@ export default function Slide13() {
                 style={{
                   width: "96px",
                   height: "96px",
-                  background: "rgba(232,160,32,0.1)",
-                  border: "1px solid rgba(232,160,32,0.25)",
-                  color: "#E8A020",
+                  background: "rgba(217,119,6,0.1)",
+                  border: "1px solid rgba(217,119,6,0.25)",
+                  color: "#d97706",
                   letterSpacing: "0.05em",
                 }}
               >
                 {p.initials}
               </div>
               <div>
-                <p style={{ fontSize: "0.95rem", fontWeight: 700, color: "#F5F2EE", marginBottom: "0.2rem" }}>
+                <p style={{ fontSize: "0.95rem", fontWeight: 700, color: "#0d0d0d", marginBottom: "0.2rem" }}>
                   {p.name}
                 </p>
-                <p style={{ fontSize: "0.78rem", fontWeight: 600, color: "#E8A020", marginBottom: "0.4rem" }}>
+                <p style={{ fontSize: "0.78rem", fontWeight: 600, color: "#d97706", marginBottom: "0.4rem" }}>
                   {p.role}
                 </p>
                 <p
                   style={{
                     fontSize: "0.75rem",
-                    color: "rgba(245,242,238,0.45)",
+                    color: "rgba(13,13,13,0.45)",
                     lineHeight: 1.55,
                     whiteSpace: "pre-line",
                   }}

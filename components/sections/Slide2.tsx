@@ -28,7 +28,7 @@ export default function Slide2() {
         style={{
           bottom: "-80px", left: "-60px",
           width: "240px", height: "240px",
-          background: "radial-gradient(circle, #E8A020 0%, rgba(232,160,32,0.25) 45%, transparent 68%)",
+          background: "radial-gradient(circle, #d97706 0%, rgba(217,119,6,0.25) 45%, transparent 68%)",
           filter: "blur(2px)",
         }}
       />
@@ -51,11 +51,11 @@ export default function Slide2() {
             <div key={i}>
               <div className="slide-stat">{s.number}</div>
               <div className="divider" />
-              <p style={{ color: "#F5F2EE", fontSize: "0.9rem", lineHeight: 1.6 }}>
+              <p style={{ color: "#0d0d0d", fontSize: "0.9rem", lineHeight: 1.6 }}>
                 <strong>{s.bold}</strong>{" "}
-                <span style={{ color: "rgba(245,242,238,0.6)" }}>{s.detail}</span>
+                <span style={{ color: "rgba(13,13,13,0.6)" }}>{s.detail}</span>
               </p>
-              <p className="mt-3" style={{ fontSize: "0.78rem", color: "rgba(245,242,238,0.4)" }}>
+              <p className="mt-3" style={{ fontSize: "0.78rem", color: "rgba(13,13,13,0.4)" }}>
                 {s.footnote}
               </p>
             </div>
@@ -65,11 +65,11 @@ export default function Slide2() {
         {/* Footer rule */}
         <div
           className="mt-14 pt-6"
-          style={{ borderTop: "1px solid rgba(245,242,238,0.08)" }}
+          style={{ borderTop: "1px solid rgba(13,13,13,0.08)" }}
         >
-          <p style={{ fontSize: "0.875rem", color: "rgba(245,242,238,0.5)" }}>
+          <p style={{ fontSize: "0.875rem", color: "rgba(13,13,13,0.5)" }}>
             Clinical-grade biomechanics based orthopaedic correction{" "}
-            <strong style={{ color: "rgba(245,242,238,0.85)" }}>
+            <strong style={{ color: "rgba(13,13,13,0.85)" }}>
               today reaches fewer than 1 in 10 people who need it
             </strong>
           </p>

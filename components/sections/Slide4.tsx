@@ -40,7 +40,7 @@ export default function Slide4() {
         style={{
           top: "-50px", right: "-50px",
           width: "200px", height: "200px",
-          background: "radial-gradient(circle, rgba(232,160,32,0.55) 0%, rgba(232,160,32,0.1) 50%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(217,119,6,0.55) 0%, rgba(217,119,6,0.1) 50%, transparent 70%)",
           filter: "blur(2px)",
         }}
       />
@@ -49,7 +49,7 @@ export default function Slide4() {
         style={{
           bottom: "-70px", left: "-50px",
           width: "220px", height: "220px",
-          background: "radial-gradient(circle, rgba(232,160,32,0.55) 0%, rgba(232,160,32,0.08) 50%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(217,119,6,0.55) 0%, rgba(217,119,6,0.08) 50%, transparent 70%)",
           filter: "blur(2px)",
         }}
       />
@@ -67,13 +67,13 @@ export default function Slide4() {
             <div key={i} className="flex flex-col gap-1">
               <div
                 className="w-6 h-0.5 mb-3"
-                style={{ background: "#E8A020" }}
+                style={{ background: "#d97706" }}
               />
               <p
                 style={{
                   fontSize: "1rem",
                   fontWeight: 700,
-                  color: "#F5F2EE",
+                  color: "#0d0d0d",
                   lineHeight: 1.3,
                   marginBottom: "0.4rem",
                 }}
@@ -81,7 +81,7 @@ export default function Slide4() {
                 {s.title}
               </p>
               <p className="slide-body">{s.desc}</p>
-              <p className="mt-2" style={{ fontSize: "0.75rem", color: "rgba(245,242,238,0.4)", fontStyle: "italic" }}>
+              <p className="mt-2" style={{ fontSize: "0.75rem", color: "rgba(13,13,13,0.4)", fontStyle: "italic" }}>
                 {s.tag}
               </p>
             </div>

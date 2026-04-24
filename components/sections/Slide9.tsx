@@ -22,7 +22,7 @@ export default function Slide9() {
         style={{
           top: "-30px", right: "-30px",
           width: "160px", height: "160px",
-          background: "radial-gradient(circle, rgba(232,160,32,0.55) 0%, rgba(232,160,32,0.08) 50%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(217,119,6,0.55) 0%, rgba(217,119,6,0.08) 50%, transparent 70%)",
           filter: "blur(3px)",
         }}
       />
@@ -58,10 +58,10 @@ export default function Slide9() {
 
         <p
           className="mt-8"
-          style={{ fontSize: "clamp(0.9rem, 1.6vw, 1.1rem)", color: "rgba(245,242,238,0.7)" }}
+          style={{ fontSize: "clamp(0.9rem, 1.6vw, 1.1rem)", color: "rgba(13,13,13,0.7)" }}
         >
           Every solution fails on{" "}
-          <strong style={{ color: "#F5F2EE" }}>at least two of three dimensions</strong>
+          <strong style={{ color: "#0d0d0d" }}>at least two of three dimensions</strong>
         </p>
       </div>
     </section>

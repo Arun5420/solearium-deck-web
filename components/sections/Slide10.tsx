@@ -55,7 +55,7 @@ export default function Slide10() {
               key={i}
               className="flex flex-col gap-5"
               style={{
-                borderLeft: "2px solid rgba(232,160,32,0.3)",
+                borderLeft: "2px solid rgba(217,119,6,0.3)",
                 paddingLeft: "1.25rem",
               }}
             >
@@ -66,7 +66,7 @@ export default function Slide10() {
                   style={{
                     fontSize: "1.05rem",
                     fontWeight: 700,
-                    color: "#F5F2EE",
+                    color: "#0d0d0d",
                     marginTop: "0.25rem",
                   }}
                 >
@@ -78,7 +78,7 @@ export default function Slide10() {
               <div className="flex flex-col gap-3">
                 <div>
                   <p className="slide-label mb-1">Objective</p>
-                  <p style={{ fontSize: "0.875rem", color: "#F5F2EE" }}>{p.objective}</p>
+                  <p style={{ fontSize: "0.875rem", color: "#0d0d0d" }}>{p.objective}</p>
                 </div>
                 <div>
                   <p className="slide-label mb-1">Scale</p>
@@ -98,9 +98,9 @@ export default function Slide10() {
                     <li
                       key={j}
                       className="flex gap-2"
-                      style={{ fontSize: "0.82rem", color: "rgba(245,242,238,0.6)", lineHeight: 1.5 }}
+                      style={{ fontSize: "0.82rem", color: "rgba(13,13,13,0.6)", lineHeight: 1.5 }}
                     >
-                      <span style={{ color: "#E8A020", flexShrink: 0 }}>›</span>
+                      <span style={{ color: "#d97706", flexShrink: 0 }}>›</span>
                       {m}
                     </li>
                   ))}
