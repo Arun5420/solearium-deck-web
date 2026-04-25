@@ -52,10 +52,11 @@ export default function Slide1() {
       >
         <h1
           style={{
-            fontSize: "clamp(5.5rem, 13vw, 11rem)",
+            fontSize: "clamp(3.5rem, 8vw, 7.5rem)",
             fontWeight: 900,
             lineHeight: 1,
             letterSpacing: "-0.03em",
+            whiteSpace: "nowrap",
           }}
         >
           <span className="amber">Sole</span>
