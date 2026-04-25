@@ -39,34 +39,35 @@ export default function Slide14() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-10">
           {members.map((p, i) => (
-            <div key={i} className="flex flex-col items-center text-center gap-4">
+            <div key={i} className="flex flex-col items-center text-center gap-6">
               <div
-                className="flex items-center justify-center font-black text-lg rounded-2xl"
+                className="flex items-center justify-center font-black rounded-2xl"
                 style={{
-                  width: "88px",
-                  height: "88px",
+                  width: "120px",
+                  height: "120px",
                   background: "rgba(217,119,6,0.08)",
                   border: "1px solid rgba(217,119,6,0.2)",
                   color: "#d97706",
                   letterSpacing: "0.05em",
+                  fontSize: "1.35rem",
                 }}
               >
                 {p.initials}
               </div>
               <div>
-                <p style={{ fontSize: "0.9rem", fontWeight: 700, color: "#0d0d0d", marginBottom: "0.2rem" }}>
+                <p style={{ fontSize: "18px", fontWeight: 700, color: "#0d0d0d", marginBottom: "0.35rem" }}>
                   {p.name}
                 </p>
-                <p style={{ fontSize: "0.75rem", fontWeight: 600, color: "#d97706", marginBottom: "0.3rem" }}>
+                <p style={{ fontSize: "15px", fontWeight: 600, color: "#d97706", marginBottom: "0.5rem" }}>
                   {p.role}
                 </p>
                 <p
                   style={{
-                    fontSize: "0.72rem",
+                    fontSize: "13px",
                     color: "rgba(13,13,13,0.4)",
-                    lineHeight: 1.55,
+                    lineHeight: 1.6,
                     whiteSpace: "pre-line",
                   }}
                 >

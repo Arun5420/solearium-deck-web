@@ -48,34 +48,35 @@ export default function Slide13() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {leaders.map((p, i) => (
-            <div key={i} className="flex flex-col items-center text-center gap-4">
+            <div key={i} className="flex flex-col items-center text-center gap-6">
               <div
-                className="flex items-center justify-center font-black text-lg rounded-2xl"
+                className="flex items-center justify-center font-black rounded-2xl"
                 style={{
-                  width: "96px",
-                  height: "96px",
+                  width: "120px",
+                  height: "120px",
                   background: "rgba(217,119,6,0.1)",
                   border: "1px solid rgba(217,119,6,0.25)",
                   color: "#d97706",
                   letterSpacing: "0.05em",
+                  fontSize: "1.35rem",
                 }}
               >
                 {p.initials}
               </div>
               <div>
-                <p style={{ fontSize: "0.95rem", fontWeight: 700, color: "#0d0d0d", marginBottom: "0.2rem" }}>
+                <p style={{ fontSize: "18px", fontWeight: 700, color: "#0d0d0d", marginBottom: "0.35rem" }}>
                   {p.name}
                 </p>
-                <p style={{ fontSize: "0.78rem", fontWeight: 600, color: "#d97706", marginBottom: "0.4rem" }}>
+                <p style={{ fontSize: "15px", fontWeight: 600, color: "#d97706", marginBottom: "0.5rem" }}>
                   {p.role}
                 </p>
                 <p
                   style={{
-                    fontSize: "0.75rem",
+                    fontSize: "13px",
                     color: "rgba(13,13,13,0.45)",
-                    lineHeight: 1.55,
+                    lineHeight: 1.6,
                     whiteSpace: "pre-line",
                   }}
                 >
