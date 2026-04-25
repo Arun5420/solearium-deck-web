@@ -1,11 +1,11 @@
 const milestones = [
   { date: "2026\n31 May",  above: "",  below: "Product & Process trials/\ntesting done, PMF achieved" },
   { date: "2026\n30 June", above: "100 pairs sold\nin Delhi NCR region", below: "" },
-  { date: "2026\n30 Sept", above: "Semi-custom launched,\npre-order website\npipeline live", below: "" },
-  { date: "2026\n31 Dec",  above: "",  below: "Expanded to all Tier 1\ncities of India,\n5000+ pairs sold,\nB2B expansion" },
-  { date: "2027\n30 June", above: "15000+ pairs sold,\nExpanded to tier-2 &\ntier-3, OTC line\nlaunched on e-commerce", below: "" },
-  { date: "2028\n30 June", above: "",  below: "Preventive biomechanics\ndevices for DFU\nprevention launch\n(patentable)" },
-  { date: "2028\n31 Dec",  above: "",  below: "" },
+  { date: "2026\n30 Sept", above: "",  below: "Clinical & Community\npartnerships done\nin NCR region" },
+  { date: "2026\n31 Dec",  above: "Semi-custom launched,\npre-order website\npipeline live", below: "" },
+  { date: "2027\n30 June", above: "",  below: "Expanded to all Tier 1\ncities of India,\n5000+ pairs sold,\nB2B expansion" },
+  { date: "2028\n30 June", above: "15000+ pairs sold,\nExpanded to tier-2 &\ntier-3, OTC line\nlaunched on e-commerce", below: "" },
+  { date: "2028\n31 Dec",  above: "",  below: "Preventive biomechanics\ndevices for DFU\nprevention launch\n(patentable)" },
   { date: "2029\n30 June", above: "Self-adjusting smart\nfootwear launch\nNational Sports Federation,\nArmed forces partnerships", below: "" },
 ];
 
