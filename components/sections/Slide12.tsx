@@ -12,7 +12,7 @@ const milestones = [
 function DownConnector() {
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-      <div style={{ width: 0, height: "14px", borderLeft: "1.5px dashed rgba(13,13,13,0.3)" }} />
+      <div style={{ width: 0, height: "20px", borderLeft: "1.5px dashed rgba(13,13,13,0.3)" }} />
       <div style={{ width: 0, height: 0, borderLeft: "3.5px solid transparent", borderRight: "3.5px solid transparent", borderTop: "5px solid rgba(13,13,13,0.3)" }} />
     </div>
   );
@@ -22,7 +22,7 @@ function UpConnector() {
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <div style={{ width: 0, height: 0, borderLeft: "3.5px solid transparent", borderRight: "3.5px solid transparent", borderBottom: "5px solid rgba(13,13,13,0.3)" }} />
-      <div style={{ width: 0, height: "14px", borderLeft: "1.5px dashed rgba(13,13,13,0.3)" }} />
+      <div style={{ width: 0, height: "20px", borderLeft: "1.5px dashed rgba(13,13,13,0.3)" }} />
     </div>
   );
 }
@@ -47,18 +47,18 @@ export default function Slide12() {
                 <div
                   key={i}
                   className="flex-1 flex flex-col items-center"
-                  style={{ minHeight: "110px" }}
+                  style={{ minHeight: "130px" }}
                 >
                   {m.above ? (
                     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", height: "100%", justifyContent: "flex-end" }}>
                       <p
                         style={{
-                          fontSize: "0.7rem",
+                          fontSize: "13px",
                           color: "rgba(13,13,13,0.65)",
-                          lineHeight: 1.5,
+                          lineHeight: 1.55,
                           whiteSpace: "pre-line",
                           textAlign: "center",
-                          marginBottom: "6px",
+                          marginBottom: "10px",
                         }}
                       >
                         {m.above}
@@ -77,7 +77,7 @@ export default function Slide12() {
                   <div
                     className="relative w-full flex items-center justify-center"
                     style={{
-                      height: "38px",
+                      height: "46px",
                       background: "#d97706",
                       clipPath:
                         i < milestones.length - 1
@@ -86,18 +86,14 @@ export default function Slide12() {
                       marginRight: i < milestones.length - 1 ? "1px" : "0",
                     }}
                   >
-                    <p
-                      style={{
-                        fontSize: "0.6rem",
-                        fontWeight: 800,
-                        color: "#f9f8f3",
-                        whiteSpace: "pre-line",
-                        textAlign: "center",
-                        lineHeight: 1.3,
-                      }}
-                    >
-                      {m.date}
-                    </p>
+                    <div style={{ textAlign: "center" }}>
+                      <span style={{ display: "block", fontSize: "13px", fontWeight: 800, color: "#f9f8f3", lineHeight: 1.2 }}>
+                        {m.date.split("\n")[0]}
+                      </span>
+                      <span style={{ display: "block", fontSize: "12px", fontWeight: 600, color: "#f9f8f3", lineHeight: 1.2 }}>
+                        {m.date.split("\n")[1]}
+                      </span>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -109,7 +105,7 @@ export default function Slide12() {
                 <div
                   key={i}
                   className="flex-1 flex flex-col items-center"
-                  style={{ minHeight: "110px" }}
+                  style={{ minHeight: "130px" }}
                 >
                   {m.below ? (
                     <>
@@ -118,12 +114,12 @@ export default function Slide12() {
                       </div>
                       <p
                         style={{
-                          fontSize: "0.7rem",
+                          fontSize: "13px",
                           color: "rgba(13,13,13,0.65)",
-                          lineHeight: 1.5,
+                          lineHeight: 1.55,
                           whiteSpace: "pre-line",
                           textAlign: "center",
-                          marginTop: "6px",
+                          marginTop: "10px",
                         }}
                       >
                         {m.below}
