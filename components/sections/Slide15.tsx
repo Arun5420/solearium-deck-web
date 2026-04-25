@@ -63,17 +63,15 @@ export default function Slide15() {
           href="https://sole-arium.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6"
+          className="mt-2"
           style={{
-            fontSize: "clamp(1rem, 2vw, 1.2rem)",
-            fontWeight: 500,
-            color: "#0d0d0d",
+            fontSize: "0.9rem",
+            color: "rgba(13,13,13,0.6)",
             textDecoration: "underline",
-            textUnderlineOffset: "4px",
-            opacity: 0.8,
+            textUnderlineOffset: "3px",
           }}
         >
-          Sole-arium: Biomechanical Intelligence for How India Moves
+          https://sole-arium.com/
         </a>
       </div>
     </section>
