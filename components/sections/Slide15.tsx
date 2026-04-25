@@ -54,10 +54,13 @@ export default function Slide15() {
           <p style={{ fontSize: "0.9rem", color: "rgba(13,13,13,0.6)" }}>
             +91 7230945132
           </p>
+          <p style={{ fontSize: "0.9rem", color: "rgba(13,13,13,0.6)" }}>
+            +91 9643315360
+          </p>
         </div>
 
         <a
-          href="https://www.sole-arium.com/"
+          href="https://sole-arium.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-6"
@@ -70,7 +73,7 @@ export default function Slide15() {
             opacity: 0.8,
           }}
         >
-          https://www.sole-arium.com/
+          Sole-arium: Biomechanical Intelligence for How India Moves
         </a>
       </div>
     </section>
