@@ -1,13 +1,31 @@
 const milestones = [
-  { date: "2026\n31 May",    above: "100 pairs sold\nin Delhi NCR region",          below: "Product & Process trials/\ntesting done, PMF achieved" },
-  { date: "2026\n30 June",   above: "Clinical & Community\npartnerships done\nin NCR region", below: "" },
-  { date: "2026\n30 Sept",   above: "",                                              below: "Semi-custom launched,\npre-order website\npipeline live" },
-  { date: "2026\n31 Dec",    above: "Expanded to all Tier 1\ncities of India,\n5000+ pairs sold,\nB2B expansion", below: "" },
-  { date: "2027\n30 June",   above: "",                                              below: "15000+ pairs sold,\nExpanded to tier-2 &\ntier-3, OTC line\nlaunched on e-commerce" },
-  { date: "2028\n30 June",   above: "Preventive biomechanics\ndevices for DFU\nprevention launch\n(patentable)", below: "" },
-  { date: "2028\n31 Dec",    above: "",                                              below: "" },
-  { date: "2029\n30 June",   above: "Self-adjusting smart\nfootwear launch\nNational Sports Federation,\nArmed forces partnerships", below: "" },
+  { date: "2026\n31 May",  above: "",  below: "Product & Process trials/\ntesting done, PMF achieved" },
+  { date: "2026\n30 June", above: "100 pairs sold\nin Delhi NCR region", below: "" },
+  { date: "2026\n30 Sept", above: "Semi-custom launched,\npre-order website\npipeline live", below: "" },
+  { date: "2026\n31 Dec",  above: "",  below: "Expanded to all Tier 1\ncities of India,\n5000+ pairs sold,\nB2B expansion" },
+  { date: "2027\n30 June", above: "15000+ pairs sold,\nExpanded to tier-2 &\ntier-3, OTC line\nlaunched on e-commerce", below: "" },
+  { date: "2028\n30 June", above: "",  below: "Preventive biomechanics\ndevices for DFU\nprevention launch\n(patentable)" },
+  { date: "2028\n31 Dec",  above: "",  below: "" },
+  { date: "2029\n30 June", above: "Self-adjusting smart\nfootwear launch\nNational Sports Federation,\nArmed forces partnerships", below: "" },
 ];
+
+function DownConnector() {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <div style={{ width: 0, height: "14px", borderLeft: "1.5px dashed rgba(13,13,13,0.3)" }} />
+      <div style={{ width: 0, height: 0, borderLeft: "3.5px solid transparent", borderRight: "3.5px solid transparent", borderTop: "5px solid rgba(13,13,13,0.3)" }} />
+    </div>
+  );
+}
+
+function UpConnector() {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <div style={{ width: 0, height: 0, borderLeft: "3.5px solid transparent", borderRight: "3.5px solid transparent", borderBottom: "5px solid rgba(13,13,13,0.3)" }} />
+      <div style={{ width: 0, height: "14px", borderLeft: "1.5px dashed rgba(13,13,13,0.3)" }} />
+    </div>
+  );
+}
 
 export default function Slide12() {
   return (
@@ -23,32 +41,36 @@ export default function Slide12() {
         <div className="overflow-x-auto">
           <div style={{ minWidth: "900px" }}>
 
-            {/* Above-line labels */}
+            {/* Above-line labels — text at top, connector arrow at bottom pointing down */}
             <div className="flex">
               {milestones.map((m, i) => (
                 <div
                   key={i}
-                  className="flex-1 flex flex-col items-center pb-4"
-                  style={{ minHeight: "100px" }}
+                  className="flex-1 flex flex-col items-center"
+                  style={{ minHeight: "110px" }}
                 >
-                  {m.above && (
-                    <p
-                      style={{
-                        fontSize: "0.7rem",
-                        color: "rgba(13,13,13,0.65)",
-                        lineHeight: 1.5,
-                        whiteSpace: "pre-line",
-                        textAlign: "center",
-                      }}
-                    >
-                      {m.above}
-                    </p>
-                  )}
+                  {m.above ? (
+                    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", height: "100%", justifyContent: "flex-end" }}>
+                      <p
+                        style={{
+                          fontSize: "0.7rem",
+                          color: "rgba(13,13,13,0.65)",
+                          lineHeight: 1.5,
+                          whiteSpace: "pre-line",
+                          textAlign: "center",
+                          marginBottom: "6px",
+                        }}
+                      >
+                        {m.above}
+                      </p>
+                      <DownConnector />
+                    </div>
+                  ) : null}
                 </div>
               ))}
             </div>
 
-            {/* Arrow row */}
+            {/* Timeline arrow row */}
             <div className="flex">
               {milestones.map((m, i) => (
                 <div key={i} className="flex-1 flex items-center">
@@ -81,27 +103,33 @@ export default function Slide12() {
               ))}
             </div>
 
-            {/* Below-line labels */}
+            {/* Below-line labels — connector arrow at top pointing up, then text */}
             <div className="flex">
               {milestones.map((m, i) => (
                 <div
                   key={i}
-                  className="flex-1 flex flex-col items-center pt-4"
-                  style={{ minHeight: "100px" }}
+                  className="flex-1 flex flex-col items-center"
+                  style={{ minHeight: "110px" }}
                 >
-                  {m.below && (
-                    <p
-                      style={{
-                        fontSize: "0.7rem",
-                        color: "rgba(13,13,13,0.65)",
-                        lineHeight: 1.5,
-                        whiteSpace: "pre-line",
-                        textAlign: "center",
-                      }}
-                    >
-                      {m.below}
-                    </p>
-                  )}
+                  {m.below ? (
+                    <>
+                      <div style={{ marginTop: "0px" }}>
+                        <UpConnector />
+                      </div>
+                      <p
+                        style={{
+                          fontSize: "0.7rem",
+                          color: "rgba(13,13,13,0.65)",
+                          lineHeight: 1.5,
+                          whiteSpace: "pre-line",
+                          textAlign: "center",
+                          marginTop: "6px",
+                        }}
+                      >
+                        {m.below}
+                      </p>
+                    </>
+                  ) : null}
                 </div>
               ))}
             </div>
